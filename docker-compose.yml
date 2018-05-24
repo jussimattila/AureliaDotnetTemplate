@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  aureliadotnettemplateapigateway:
+    image: aureliadotnettemplateapigateway
+    build:
+      context: .
+      dockerfile: src/gw/Dockerfile
+    ports:
+      - "5000:80"
+
+  aureliadotnettemplate:
+    image: aureliadotnettemplate
+    build:
+      context: .
+      dockerfile: src/spa/Dockerfile
+    ports:
+      - "5001:80"
+ 
+  weather:
+    image: weather
+    build:
+      context: .
+      dockerfile: src/weather/Dockerfile
+    ports:
+      - "5002:80"

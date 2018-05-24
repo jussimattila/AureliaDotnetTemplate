@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  aureliadotnettemplateapigateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  aureliadotnettemplate:
+    build:
+      dockerfile: src/spa/Dockerfile.dev
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  weather:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
