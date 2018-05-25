@@ -8,7 +8,7 @@ export class Fetchdata {
 	public forecasts: WeatherForecast[];
 
 	async activate() {
-		this.forecasts = await this.http.fetch("api/SampleData/WeatherForecasts").then(result => result.json() as Promise<WeatherForecast[]>);
+		this.forecasts = await this.http.fetch("weather/forecasts").then(result => result.json() as Promise<WeatherForecast[]>);
 	}
 }
 

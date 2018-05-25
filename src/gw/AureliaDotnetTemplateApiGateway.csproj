@@ -6,18 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="AspNetCore.Proxy" Version="1.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
-    <PackageReference Include="Ocelot" Version="7.0.4" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Update="ocelot.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
 
 </Project>

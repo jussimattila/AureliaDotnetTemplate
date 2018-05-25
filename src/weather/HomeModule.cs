@@ -8,7 +8,7 @@
 
     public class HomeModule : CarterModule
     {
-        public HomeModule() : base("weather")
+        public HomeModule()
         {
             Get("forecasts", async(req, res, routeData) => await res.AsJson(WeatherForecasts()));
         }

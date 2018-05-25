@@ -24,7 +24,7 @@ module.exports = (env, argv) => {
 		output: {
 			path: path.resolve(bundleOutputDir),
 			publicPath: "/dist/",
-			filename: "[name].js",
+			filename: "[name].js",   
 			chunkFilename: "[name].js"
 		},
 		module: {
@@ -49,7 +49,11 @@ module.exports = (env, argv) => {
 				}
 			}
 		},
-		devtool: isDevBuild ? "source-map" : false,
+        devtool: isDevBuild ? "source-map" : false,
+		watchOptions: {
+		    aggregateTimeout: 500,
+		    poll: 500
+		},
 		performance: {
 			hints: false
 		},
