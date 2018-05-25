@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  apigateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  spa:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+    build:
+      dockerfile: src/spa/Dockerfile.dev
+
+  weather:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
