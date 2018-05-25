@@ -1,5 +1,5 @@
 export class Counter {
-    public currentCount = 0;
+    public currentCount = 1000;
 
     public incrementCounter() {
         this.currentCount++;

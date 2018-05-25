@@ -15,8 +15,8 @@ namespace AureliaDotnetTemplateApi
         public void Configure(IApplicationBuilder app)
         {
             app.UseProxy("weather/{path}", async args => await Task.FromResult("http://weather/" + args["path"]));
-            app.UseProxy("dist/{path}", async args => await Task.FromResult("http://aureliadotnettemplate/dist/" + args["path"]));
-            app.UseProxy(string.Empty, async _ => await Task.FromResult("http://aureliadotnettemplate/"));
+            app.UseProxy("dist/{path}", async args => await Task.FromResult("http://spa/dist/" + args["path"]));
+            app.UseProxy(string.Empty, async _ => await Task.FromResult("http://spa/"));
         }
     }
 }

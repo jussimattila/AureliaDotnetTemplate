@@ -5,7 +5,7 @@ EXPOSE 80
 FROM microsoft/aspnetcore-build:2.0 AS build
 WORKDIR /src
 COPY AureliaDotnetTemplate.sln ./
-COPY src/gw/AureliaDotnetTemplateApiGateway.csproj src/gw/
+COPY src/gw/cNeuro.ApiGateway.csproj src/gw/
 RUN dotnet restore -nowarn:msb3202,nu1503
 COPY . .
 WORKDIR /src/src/gw
@@ -17,4 +17,4 @@ RUN dotnet publish -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "AureliaDotnetTemplateApiGateway.dll"]
+ENTRYPOINT ["dotnet", "cNeuro.ApiGateway.dll"]

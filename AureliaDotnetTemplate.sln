@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AureliaDotnetTemplate", "src\spa\AureliaDotnetTemplate.csproj", "{7D207408-A168-4EC5-85E5-EB6303E9F762}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cNeuro.Spa", "src\spa\cNeuro.Spa.csproj", "{7D207408-A168-4EC5-85E5-EB6303E9F762}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E29522B0-F3E3-42FC-8407-D0C5A5820720}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Weather", "src\weather\Weather.csproj", "{EECE9D9C-479A-448B-A804-D034E1DE2ABF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AureliaDotnetTemplateApiGateway", "src\gw\AureliaDotnetTemplateApiGateway.csproj", "{A3B23719-F565-44DA-8C7B-4ED4E2563252}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cNeuro.ApiGateway", "src\gw\cNeuro.ApiGateway.csproj", "{A3B23719-F565-44DA-8C7B-4ED4E2563252}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

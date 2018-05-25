@@ -5,7 +5,7 @@ EXPOSE 80
 FROM microsoft/aspnetcore-build:2.0 AS build
 WORKDIR /src
 COPY AureliaDotnetTemplate.sln ./
-COPY src/spa/AureliaDotnetTemplate.csproj src/spa/
+COPY src/spa/cNeuro.Spa.csproj src/spa/
 RUN dotnet restore -nowarn:msb3202,nu1503
 COPY . .
 WORKDIR /src/src/spa
@@ -17,4 +17,4 @@ RUN dotnet publish -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "AureliaDotnetTemplate.dll"]
+ENTRYPOINT ["dotnet", "cNeuro.Spa.dll"]

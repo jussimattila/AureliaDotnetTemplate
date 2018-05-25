@@ -1,16 +1,16 @@
 version: '3'
 
 services:
-  aureliadotnettemplateapigateway:
-    image: aureliadotnettemplateapigateway
+  apigateway:
+    image: apigateway
     build:
       context: .
       dockerfile: src/gw/Dockerfile
     ports:
       - "5000:80"
 
-  aureliadotnettemplate:
-    image: aureliadotnettemplate
+  spa:
+    image: spa
     build:
       context: .
       dockerfile: src/spa/Dockerfile
