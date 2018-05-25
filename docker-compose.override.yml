@@ -8,11 +8,9 @@ services:
   spa:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-
     build:
-      dockerfile: src/spa/Dockerfile.dev
+      dockerfile: Dockerfile.dev
 
   weather:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-

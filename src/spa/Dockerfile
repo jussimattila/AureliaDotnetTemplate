@@ -1,20 +1,15 @@
-FROM microsoft/aspnetcore:2.0 AS base
-WORKDIR /app
-EXPOSE 80
-
 FROM microsoft/aspnetcore-build:2.0 AS build
 WORKDIR /src
-COPY AureliaDotnetTemplate.sln ./
-COPY src/spa/cNeuro.Spa.csproj src/spa/
+COPY cNeuro.Spa.csproj .
 RUN dotnet restore -nowarn:msb3202,nu1503
 COPY . .
-WORKDIR /src/src/spa
-RUN dotnet build -c Release -o /app
+RUN dotnet build -c Release -o /dist
 
 FROM build AS publish
-RUN dotnet publish -c Release -o /app
+RUN dotnet publish -c Release -o /dist
 
-FROM base AS final
-WORKDIR /app
-COPY --from=publish /app .
+FROM microsoft/aspnetcore:2.0
+WORKDIR /dist
+COPY --from=publish /dist .
+EXPOSE 80
 ENTRYPOINT ["dotnet", "cNeuro.Spa.dll"]

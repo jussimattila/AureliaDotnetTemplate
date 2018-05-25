@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/AureliaDotnetTemplate.sln"
+                "${workspaceFolder}/src/gw/cNeuro.ApiGateway.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

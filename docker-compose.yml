@@ -4,23 +4,23 @@ services:
   apigateway:
     image: apigateway
     build:
-      context: .
-      dockerfile: src/gw/Dockerfile
+      context: src/gw
+      dockerfile: Dockerfile
     ports:
       - "5000:80"
 
   spa:
     image: spa
     build:
-      context: .
-      dockerfile: src/spa/Dockerfile
+      context: src/spa
+      dockerfile: Dockerfile
     ports:
       - "5001:80"
  
   weather:
     image: weather
     build:
-      context: .
-      dockerfile: src/weather/Dockerfile
+      context: src/weather
+      dockerfile: Dockerfile
     ports:
       - "5002:80"
